@@ -62,6 +62,11 @@ const App = () => {
         return [...prev, id];
       });
     }
+
+    // Check if 1 washer and 1 dryer are selected and lock the ability to select more
+    if (washerBookings >= 2) {
+      alert("You have booked 2 washers and dryers for the week. You can't book more.");
+    }
   };
 
   return (
